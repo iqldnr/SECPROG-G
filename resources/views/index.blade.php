@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
     <Title>MASUKIN NAMA DISINI</Title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
