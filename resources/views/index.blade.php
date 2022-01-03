@@ -11,7 +11,7 @@
 <body>
     <section class="header">
         <nav>
-            <a href="index.html"></href><img src="images/logo.png"></a>
+            <a href="index.html"></href><img class="main-logo" src="../../images/mainlogo.svg"></a>
             <div class="nav-links-a">
                 <ul>
                     <li><a href="index.html">HOME</a></li>
