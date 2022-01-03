@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head class="mb-4">
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
     <Title>MASUKIN NAMA DISINI</Title>
     <link rel="stylesheet" href="../css/style.css">
@@ -75,3 +75,5 @@
     </section>
 </body>
 </html>
+
+

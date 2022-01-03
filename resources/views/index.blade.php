@@ -14,10 +14,10 @@
             <a href="index.html"></href><img class="main-logo" src="../../images/mainlogo.svg"></a>
             <div class="nav-links-a">
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="produk.html">PRODUK</a></li>
-                    <li><a href="login.html">MASUK</a></li>
-                    <li><a href="tentang.html">TENTANG KAMI</a></li>
+                    <li><a href="index.blade.php">HOME</a></li>
+                    <li><a href="produk.blade.php">PRODUK</a></li>
+                    <li><a href="login.blade.php">MASUK</a></li>
+                    <li><a href="tentang.blade.php">TENTANG KAMI</a></li>
                 </ul>
             </div>
         </nav>
