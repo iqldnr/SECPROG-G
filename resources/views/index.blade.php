@@ -22,7 +22,7 @@
             </div>
         </nav>
     <div class="text-box">
-        <h1>Toko Pentes Terbaik</h1>
+        <h1>Biji Untuk Menghijaukan Nusantara</h1>
         <p>Jasa sudah terbukti</p>
         <a href="tentang.html" class="hero-btn">Belajar Tentang Kami</a>
     </div>
