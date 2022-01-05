@@ -11,7 +11,7 @@
 <body>
     <section class="header">
         <nav>
-            <a href="index.html"></href><img src="images/logo.png"></a>
+            <a href="index.html"></href><img src="../../public/images/logo.png"></a>
             <div class="nav-links-a">
                 <ul>
                     <li><a href="index.php">HOME</a></li>

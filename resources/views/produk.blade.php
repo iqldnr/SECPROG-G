@@ -13,7 +13,7 @@
 <body>
     <section class="header">
         <nav>
-            <a href="index.html"></href><img src="images/logo.png"></a>
+            <a href="index.html"></href><img src="../../public/images/logo.png"></a>
             <div class="nav-links-a">
                 <ul>
                     <li><a href="index.html">HOME</a></li>
@@ -29,7 +29,7 @@
         <a href="" class="hero-btn"></a>
     </div>
     <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="images/produk.jpg" alt="Card image cap">
+        <img class="card-img-top" src="../../public/images/produk.jpg" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">PENTES M4 LU</h5>
           <p class="card-text">;)</p>
