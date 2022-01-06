@@ -16,4 +16,5 @@ class items extends Model
         'stock',
         'description'
     ];
+    public $timestamps = false;
 }
