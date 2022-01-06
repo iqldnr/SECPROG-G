@@ -11,13 +11,13 @@
 <body>
     <section class="header">
         <nav>
-            <a href="index.html"></href><img src="../../public/images/logo.png"></a>
+            <a href="{{ url('/home') }}"></href><img src="../../public/images/logo.png"></a>
             <div class="nav-links-a">
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="produk.html">PRODUK</a></li>
-                    <li><a href="login.html">MASUK</a></li>
-                    <li><a href="tentang.html">TENTANG KAMI</a></li>
+                    <li><a href="{{ url('/home') }}">HOME</a></li>
+                    <li><a href="{{ url('/produk') }}">PRODUK</a></li>
+                    <li><a href="{{ url('/dashboard') }}">MASUK</a></li>
+                    <li><a href="{{ url('/tentang') }}">TENTANG KAMI</a></li>
                 </ul>
             </div>
         </nav>

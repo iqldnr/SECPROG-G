@@ -17,6 +17,21 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/home', function () {
+    return view('index');
+});
+
+Route::get('/produk', function () {
+    return view('produk');
+});
+Route::get('/tentang', function () {
+    return view('tentang');
+});
+
+Route::get('/masuk', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
