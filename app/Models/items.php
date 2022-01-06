@@ -16,4 +16,8 @@ class items extends Model
         'stock',
         'description'
     ];
+    /**
+     * @var mixed
+     */
+    private $uploader;
 }
