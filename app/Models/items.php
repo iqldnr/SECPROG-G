@@ -17,4 +17,8 @@ class items extends Model
         'description'
     ];
     public $timestamps = false;
+    /**
+     * @var mixed
+     */
+    private $uploader;
 }
