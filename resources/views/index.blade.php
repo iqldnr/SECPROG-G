@@ -11,19 +11,33 @@
 <body>
     <section class="header">
         <nav>
-            <a href="index.html"></href><img class="main-logo" src="../../public/images/mainlogo.svg"></a>
+{{--            <a href="index.html"></href><img class="main-logo" src="../../public/images/mainlogo.svg"></a>--}}
+            <div class ="object-left fixed">
+                @if (Route::has('login'))
+                    <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                        @auth
+                            <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500">DASHBOARD</a>
+                        @else
+                            <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500">LOG IN</a>
+
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500">REGISTER</a>
+                            @endif
+                        @endauth
+                    </div>
+                @endif
+            </div>
             <div class="nav-links-a">
                 <ul>
-                    <li><a href="index.blade.php">HOME</a></li>
-                    <li><a href="produk.blade.php">PRODUK</a></li>
-                    <li><a href="login.blade.php">MASUK</a></li>
-                    <li><a href="tentang.blade.php">TENTANG KAMI</a></li>
+                    <li><a href="index.blade.php" class="ml-4 text-sm text-gray-700 dark:text-gray-500">HOME</a></li>
+                    <li><a href="produk.blade.php" class="ml-4 text-sm text-gray-700 dark:text-gray-500">PRODUK</a></li>
+                    <li><a href="tentang.blade.php" class="ml-4 text-sm text-gray-700 dark:text-gray-500">TENTANG KAMI</a></li>
                 </ul>
             </div>
         </nav>
     <div class="text-box">
         <h1>Biji Untuk Menghijaukan Nusantara</h1>
-        <p>Jasa sudah terbukti</p>
+        <p>Sungguh Sangat Subur</p>
         <a href="tentang.html" class="hero-btn">Belajar Tentang Kami</a>
     </div>
 
