@@ -10,23 +10,16 @@
 </head>
 <body>
     <section class="header">
-        <nav>
-            <a href="{{ url('/home') }}"></href><img src="../../public/images/logo.png"></a>
-            <div class="nav-links-a">
-                <ul>
-                    <li><a href="{{ url('/home') }}">HOME</a></li>
-                    <li><a href="{{ url('/produk') }}">PRODUK</a></li>
-                    <li><a href="{{ url('/dashboard') }}">MASUK</a></li>
-                    <li><a href="{{ url('/tentang') }}">TENTANG KAMI</a></li>
-                </ul>
-            </div>
-        </nav>
-    <div class="text-box">
-        <h1>Tentang Kami</h1>
-        <p>Toko Sunib Terbaik</p>
-        <a href="https://tinyurl.com/4sasfrny" class="hero-btn">Balik Home</a>
-    </div>
+    @extends('navbar.navbar')
+    @section('content')
+        <div class="text-box">
+            <h1>Tentang Kami</h1>
+            <p>Toko Sunib Terbaik</p>
+            <a href="https://tinyurl.com/4sasfrny" class="hero-btn">Balik Home</a>
+        </div>
 
+    @endsection
+    
     </section>
 </body>
 </html>

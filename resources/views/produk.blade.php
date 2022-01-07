@@ -12,32 +12,25 @@
 </head>
 <body>
     <section class="header">
-        <nav>
-            <a href="{{ url('/home') }}"></href><img src="../../public/images/logo.png"></a>
-            <div class="nav-links-a">
-                <ul>
-                    <li><a href="{{ url('/home') }}">HOME</a></li>
-                    <li><a href="{{ url('/produk') }}">PRODUK</a></li>
-                    <li><a href="{{ url('/masuk') }}">MASUK</a></li>
-                    <li><a href="{{ url('/tentang') }}">TENTANG KAMI</a></li>
-                </ul>
+    @extends('navbar.navbar')
+
+    @section('content')
+        <div class="text-box-produk">
+            <h1>Produk</h1>
+            <p>Jasa sudah terbukti</p>
+            <a href="" class="hero-btn"></a>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="../../public/images/produk.jpg" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">PENTES M4 LU</h5>
+            <p class="card-text">;)</p>
             </div>
-        </nav>
-    <div class="text-box-produk">
-        <h1>Produk</h1>
-        <p>Jasa sudah terbukti</p>
-        <a href="" class="hero-btn"></a>
-    </div>
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="../../public/images/produk.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">PENTES M4 LU</h5>
-          <p class="card-text">;)</p>
+            <div class="card-body">
+            <a href="#" class="card-link">BELI</a>
+            </div>
         </div>
-        <div class="card-body">
-          <a href="#" class="card-link">BELI</a>
-        </div>
-      </div>
+    @endsection
 
     </section>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
