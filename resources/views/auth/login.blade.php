@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="resources/css/style.css">
+<link rel="stylesheet" href="../../css/style.css">
 <x-guest-layout>
     <x-auth-card>
 
