@@ -27,7 +27,9 @@ Route::get('/produk', function () {
 Route::get('/tentang', function () {
     return view('tentang');
 });
-
+Route::get('/upload-produk', function () {
+    return view('upload-produk');
+});
 Route::get('/masuk', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

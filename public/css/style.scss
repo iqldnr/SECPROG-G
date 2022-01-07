@@ -8,6 +8,17 @@
     font-family: "Oswald", sans-serif;
 
 }
+.upload-produk{
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+    background: rgba(243, 244, 246, 0.55);
+
+    .isian{
+        @apply grid-cols-2 grid gap-4 align-text-bottom;
+    }
+}
 .main-logo{
 
 }
@@ -51,7 +62,7 @@ nav img {
 
 .nav-links-a ul li::after {
     content: "";
-    width: 0%;
+    width: 0;
     height: 5px;
     background: #f44336;
     display: block;
