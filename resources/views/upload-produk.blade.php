@@ -14,11 +14,8 @@
 
         @section('content')
             <div class="container upload-produk text-center">
-                <div class="isian">
-                    <x-label for="gambar" :value="__('Gambar Produk')" />
 
-                </div>
-                <form method="POST"  action="{{ route('login') }}">
+                <form method="POST" action="/uploadproduk">
                 @csrf
                     <div class="isian">
                         <x-label for="nama" :value="__('Product Name')" />
@@ -33,7 +30,7 @@
                     </div>
                     <div class="isian">
                         <x-label for="description" :value="__('Description')" />
-                        
+
                         <x-input id="description" class="" type="text" name="description" :value="old('description')" required autofocus />
                     </div>
 
@@ -43,8 +40,6 @@
                     </div>
 
                     <x-input class="" type="submit" value="Upload" name="submit" />
-
-                </div>
 
                 </form>
             </div>

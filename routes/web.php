@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ItemsController;
+use App\Models\items;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,5 +39,8 @@ Route::get('/masuk', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+Route::post('/uploadproduk', [ItemsController::class, 'store']);
+
 
 require __DIR__.'/auth.php';
