@@ -42,7 +42,7 @@
 
                     <div class="isian">
                     <x-label for="gambar" :value="__('Gambar Produk')" />
-                    <x-input type="file" name="files[]" id="image" class="" />
+                    <x-input type="file" name="files[]" id="image" class="" :value="old('image')" required autofocus />
                     </div>
 
                     <x-input class="" type="submit" value="Upload" name="submit" />
