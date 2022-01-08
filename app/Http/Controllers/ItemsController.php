@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\items;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class ItemsController extends Controller
 {
@@ -15,13 +16,17 @@ class ItemsController extends Controller
 
         $items->name = $request->name;
 
-        $items->uploader = ;
+        $items->uploader = "admin";
 
         $items->price = $request->price;
 
         $items->description = $request->description;
 
+        $items->jumlah = $request->jumlah;
+
         $items->save();
+
+        return Redirect::to('produk');
     }
     public function update(Request $request)
     {

@@ -40,7 +40,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::post('/uploadproduk', [ItemsController::class, 'store']);
+Route::post('/upload-produk', [ItemsController::class, 'store']);
 
 
 require __DIR__.'/auth.php';

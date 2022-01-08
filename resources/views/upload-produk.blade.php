@@ -15,7 +15,7 @@
         @section('content')
             <div class="container upload-produk text-center">
 
-                <form method="POST" action="/uploadproduk">
+                <form method="POST" action="/upload-produk">
                 @csrf
                     <div class="isian">
                         <x-label for="nama" :value="__('Product Name')" />
@@ -32,6 +32,12 @@
                         <x-label for="description" :value="__('Description')" />
 
                         <x-input id="description" class="" type="text" name="description" :value="old('description')" required autofocus />
+                    </div>
+
+                    <div class="isian">
+                        <x-label for="jumlah" :value="__('Jumlah')" />
+
+                        <x-input id="jumlah" class="" type="number" name="jumlah" :value="old('jumlah')" required autofocus />
                     </div>
 
                     <div class="isian">
