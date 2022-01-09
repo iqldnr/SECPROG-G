@@ -11,26 +11,32 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
-    <section class="header">
-    @extends('navbar.navbar')
+    <section class="header" style="padding: 3rem;">
+        @extends('navbar.navbar')
 
-    @section('content')
-        <div class="text-box-produk">
-            <h1>Produk</h1>
-            <p>Jasa sudah terbukti</p>
-            <a href="" class="hero-btn"></a>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="../../public/images/produk.jpg" alt="Card image cap">
-            <div class="card-body">
-            <h5 class="card-title">PENTES M4 LU</h5>
-            <p class="card-text">;)</p>
+        @section('content')
+            <div class="text-box-produk">
+                <h1>Produk</h1>
+                <p>Jasa sudah terbukti</p>
+                <a href="" class="hero-btn"></a>
             </div>
-            <div class="card-body">
-            <a href="#" class="card-link">BELI</a>
-            </div>
-        </div>
-    @endsection
+            @foreach ($produk as $barang)
+                <div class="card" style="width: 18rem; padding: 3rem; display:flex;">
+                    <div class="card-body">
+                        <h3 class="card-title">{{ $barang["name"] }}</h3>
+                        <h5>{{ $barang["uploader"] }}</h5>
+                        <img class="card-img-top" src="../../public/images/produk.jpg" alt="Card image cap">
+
+                        <p class="card-text">{{ $barang["description"] }}</p>
+                        <p>Stock: {{ $barang["stock"] }}</p>
+                        <h6>{{ $barang["price"] }}</h6>
+                    </div>
+                    <div class="card-body">
+                        <a href="#" class="card-link">BELI</a>
+                    </div>
+                </div>
+            @endforeach
+        @endsection
 
     </section>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

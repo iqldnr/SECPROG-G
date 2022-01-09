@@ -17,9 +17,9 @@ class CreateItemsTable extends Migration
             $table->increments('id');
             $table->string('name', 255);
             $table->string('uploader', 255);
+            $table->integer('stock');
             $table->integer('price');
             $table->string('description', 255);
-            $table->integer('jumlah');
         });
     }
 

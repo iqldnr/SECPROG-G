@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
 Route::get('/', function () {
     return view('index');
 });
@@ -24,7 +26,10 @@ Route::get('/home', function () {
 });
 
 Route::get('/produk', function () {
-    return view('produk');
+    
+    return view('produk',[
+        "produk" => items::All()
+    ]);
 });
 Route::get('/tentang', function () {
     return view('tentang');
@@ -41,6 +46,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 Route::post('/upload-produk', [ItemsController::class, 'store']);
+
 
 
 require __DIR__.'/auth.php';
