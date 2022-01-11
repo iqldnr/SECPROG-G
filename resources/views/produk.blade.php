@@ -4,24 +4,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <Title>MASUKIN NAMA DISINI</Title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/stylewind.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
+
     <section class="header" style="padding: 3rem;">
         @extends('navbar.navbar')
 
         @section('content')
-            <div class="text-box-produk">
-                <h1>Produk</h1>
-                <p>Jasa sudah terbukti</p>
-                <a href="" class="hero-btn"></a>
+            <div class="text-box-produk text-center kartu">
+                <h1 >Produk-Produk Kami</h1>
+                <p>Benih-Benih terbaik</p>
             </div>
+            <div class="container-produk grid-cols-4 grid gap-4">
             @foreach ($produk as $barang)
-                <div class="card" style="width: 18rem; padding: 3rem; display:flex;">
+                <div class="card justify-center" style="width: 18rem; padding: 3rem; display:flex;">
                     <div class="card-body">
                         <h3 class="card-title">{{ $barang["name"] }}</h3>
                         <h5>{{ $barang["uploader"] }}</h5>
@@ -36,6 +37,7 @@
                     </div>
                 </div>
             @endforeach
+            </div>
         @endsection
 
     </section>

@@ -19,7 +19,7 @@
                 <a href="tentang.html" class="hero-btn">Belajar Tentang Kami</a>
             </div>
         @endsection
-    
+
 
     </section>
 </body>

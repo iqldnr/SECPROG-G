@@ -19,13 +19,23 @@
         @apply grid-cols-2 grid gap-4 align-text-bottom;
     }
 }
+.container-produk{
+    margin: auto;
+    width: 80vw;
+    padding: 10px;
+    background: rgba(243, 244, 246, 0.55);
+}
+.card{
+    margin: auto;
+    padding: 0;
+
+}
 .main-logo{
 
 }
 .header {
     min-height: 100vh;
     width: 100%;
-    background-image: url(../images/background.svg);
     background-position: center;
     background-size: cover;
     position: absolute;
@@ -95,6 +105,8 @@ nav img {
 }
 body{
     background: #f3f4f6;
+    background-image: url(../images/background.svg);
+
 }
 .hero-btn {
     display: inline-block;
