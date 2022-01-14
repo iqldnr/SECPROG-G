@@ -41,10 +41,15 @@ use Illuminate\Support\Facades\Auth;
                     <div class="card-body">
                         <form method ="post" action="/addcart" >
                             @csrf
-                            <x-input class="" type="text" name="itemid" value={{ $barang["id"] }}/>
-                            <x-label for="jumlah" :value="__('jumlah')" />
-                            <x-input id="jumlah" class="" type="number" name="jumlah" :value="old('jumlah')" required autofocus />
-                            <x-input class="" type="submit" value="Beli" name="beli" />
+                            <h5>ID = {{ $barang["id"] }}</h5>
+                            <div class="grid-cols-2 grid">
+                                <x-label for="jumlah :" :value="__('jumlah')" />
+                                <x-input id="jumlah" class="w-full" type="number" name="jumlah" :value="old('jumlah')" required autofocus />
+                            </div>
+                            <div class="w-full text-center border-8">
+                                <x-input class="" type="submit" value="Beli" name="beli" />
+                            </div>
+                            <x-input class="hidden" type="text" name="itemid" id="itemid" :value="$barang->id"  />
                         </form>
                     </div>
                 </div>
