@@ -684,12 +684,12 @@ select {
   top: 0px;
 }
 
-.right-0 {
-  right: 0px;
-}
-
 .left-0 {
   left: 0px;
+}
+
+.right-0 {
+  right: 0px;
 }
 
 .z-0 {
@@ -1066,11 +1066,6 @@ select {
 
 .fill-current {
   fill: currentColor;
-}
-
-.object-left {
-  -o-object-position: left;
-     object-position: left;
 }
 
 .p-6 {

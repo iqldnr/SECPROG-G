@@ -26,7 +26,6 @@ Route::get('/home', function () {
 });
 
 Route::get('/produk', function () {
-    
     return view('produk',[
         "produk" => items::All()
     ]);
@@ -45,8 +44,12 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::post('/upload-produk', [ItemsController::class, 'store']);
+Route::get('/cart', function (){
+    return view('components.cartview');
+});
 
+Route::post('/upload-produk', [ItemsController::class, 'store']);
+Route::post('/add-Cart', [ItemsController::class, 'store']);
 
 
 require __DIR__.'/auth.php';

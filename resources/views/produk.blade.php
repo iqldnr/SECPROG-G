@@ -1,5 +1,12 @@
+
 <!DOCTYPE html>
-<html>
+<?php
+use Illuminate\Support\Facades\Auth;
+
+
+
+?>
+<html lang="english">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -33,7 +40,13 @@
                         <h6>{{ $barang["price"] }}</h6>
                     </div>
                     <div class="card-body">
-                        <a href="#" class="card-link">BELI</a>
+                        <form method ="post" action="/add-cart" >
+                            @csrf
+                            <x-label for="jumlah" :value="__('jumlah')" />
+                            <x-input id="jumlah" class="" type="number" name="jumlah" :value="old('jumlah')" required autofocus />
+                            <x-input class="hidden" hidden name="itemid" value={{$barang["id"]}} />
+                            <x-input class="" type="submit" value="Beli" name="submit" />
+                        </form>
                     </div>
                 </div>
             @endforeach
