@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\ItemsController;
 use App\Models\items;
 use Illuminate\Support\Facades\Route;
@@ -49,7 +50,8 @@ Route::get('/cart', function (){
 });
 
 Route::post('/upload-produk', [ItemsController::class, 'store']);
-Route::post('/add-Cart', [ItemsController::class, 'store']);
+
+Route::post('/addcart', [CartController::class, 'store']);
 
 
 require __DIR__.'/auth.php';

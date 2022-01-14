@@ -14,7 +14,6 @@
 
         @section('content')
             <div class="container upload-produk text-center">
-
                 <form method="POST" action="/upload-produk">
                 @csrf
                     <div class="isian">

@@ -40,12 +40,12 @@ use Illuminate\Support\Facades\Auth;
                         <h6>{{ $barang["price"] }}</h6>
                     </div>
                     <div class="card-body">
-                        <form method ="post" action="/add-cart" >
+                        <form method ="post" action="/addcart" >
                             @csrf
                             <x-label for="jumlah" :value="__('jumlah')" />
                             <x-input id="jumlah" class="" type="number" name="jumlah" :value="old('jumlah')" required autofocus />
                             <x-input class="hidden" hidden name="itemid" value={{$barang["id"]}} />
-                            <x-input class="" type="submit" value="Beli" name="submit" />
+                            <x-input class="" type="submit" value="Beli" name="beli" />
                         </form>
                     </div>
                 </div>
