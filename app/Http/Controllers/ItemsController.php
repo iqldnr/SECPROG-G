@@ -21,15 +21,12 @@ class ItemsController extends Controller
         $items->price = $request->price;
 
         $items->description = $request->description;
-
-        $items->jumlah = $request->jumlah;
+        $items->stock = $request->jumlah;
         $items->save();
         $destination_path = 'public/image/products';
-        $image = $request->file('image');
-        $image_name = $items->id;
-        $path = $request->file('image')->storeAs($destination_path,$image_name);
-
-
+//        $image = $request->file('image');
+//        $image_name = $items->id;
+//        $path = $request->file('image')->storeAs($destination_path,$image_name);
 
 
         return Redirect::to('produk');

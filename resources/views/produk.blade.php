@@ -34,7 +34,6 @@ use Illuminate\Support\Facades\Auth;
                         <h3 class="card-title">{{ $barang["name"] }}</h3>
                         <h5>{{ $barang["uploader"] }}</h5>
                         <img class="card-img-top" src="../../public/images/produk.jpg" alt="Card image cap">
-
                         <p class="card-text">{{ $barang["description"] }}</p>
                         <p>Stock: {{ $barang["stock"] }}</p>
                         <h6>{{ $barang["price"] }}</h6>
@@ -42,9 +41,9 @@ use Illuminate\Support\Facades\Auth;
                     <div class="card-body">
                         <form method ="post" action="/addcart" >
                             @csrf
+                            <x-input class="" type="text" name="itemid" value={{ $barang["id"] }}/>
                             <x-label for="jumlah" :value="__('jumlah')" />
                             <x-input id="jumlah" class="" type="number" name="jumlah" :value="old('jumlah')" required autofocus />
-                            <x-input class="hidden" hidden name="itemid" value={{$barang["id"]}} />
                             <x-input class="" type="submit" value="Beli" name="beli" />
                         </form>
                     </div>
