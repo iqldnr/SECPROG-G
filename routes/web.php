@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ItemsController;
+use App\Models\cart;
 use App\Models\items;
 use Illuminate\Support\Facades\Route;
 
@@ -46,7 +47,9 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 Route::get('/cart', function (){
-    return view('components.cartview');
+    return view('cart',[
+        "cart" => cart::All()
+    ]);
 });
 
 Route::post('/upload-produk', [ItemsController::class, 'store']);
