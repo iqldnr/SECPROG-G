@@ -33,7 +33,7 @@ use Illuminate\Support\Facades\Auth;
                     <div class="card-body">
                         <h3 class="card-title">{{ $barang["name"] }}</h3>
                         <h5>{{ $barang["uploader"] }}</h5>
-                        <img class="card-img-top" src="../../public/images/produk.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="{{asset('/storage/images/products/'.$barang["id"].".png")}}" alt="Card image cap">
                         <p class="card-text">{{ $barang["description"] }}</p>
                         <p>Stock: {{ $barang["stock"] }}</p>
                         <h6>{{ $barang["price"] }}</h6>
