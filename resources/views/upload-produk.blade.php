@@ -14,7 +14,7 @@
 
         @section('content')
             <div class="container upload-produk text-center">
-                <form method="POST" action="/upload-produk">
+                <form method="POST" action="/upload-produk" enctype='multipart/form-data'>
                 @csrf
                     <div class="isian">
                         <x-label for="nama" :value="__('Product Name')" />

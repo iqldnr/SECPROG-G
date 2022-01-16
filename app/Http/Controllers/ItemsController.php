@@ -23,10 +23,14 @@ class ItemsController extends Controller
         $items->description = $request->description;
         $items->stock = $request->jumlah;
         $items->save();
-        $destination_path = 'public/image/products';
-//        $image = $request->file('image');
-//        $image_name = $items->id;
-//        $path = $request->file('image')->storeAs($destination_path,$image_name);
+        
+        $destination_path = 'public\images\products';
+        $image = $request->file('image');
+        $image_name = $items->id;
+        $iname = "";
+        $iname .= $image_name;
+        $iname .= ".png";
+        $path = $request->file('image')->storeAs($destination_path,$iname);
 
 
         return Redirect::to('produk');
