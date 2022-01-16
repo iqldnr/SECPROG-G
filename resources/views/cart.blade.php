@@ -1,3 +1,9 @@
+<?php use Illuminate\Support\Facades\Auth;
+    $uid = Auth::user()->id;
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,10 +22,11 @@
 
         @section('content')
             <h1>Keranjang</h1>
-            
+
             <div class="detail">
+
                 @foreach ($cart as $keranjang)
-                    @if($keranjang['userid'] === "user1")
+                    @if($keranjang['userid'] === $uid  )
                         {{-- gw ga tau cara nyambungin item ID ke nama --}}
                         <h3>Nama Barang: {{ $keranjang['itemid'] }}</h3>
                         <h5>Jumlah: {{ $keranjang['jumlah'] }}</h5>
