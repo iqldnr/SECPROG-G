@@ -2,10 +2,14 @@
 <!DOCTYPE html>
 <?php
 use Illuminate\Support\Facades\Auth;
-
-
-
 ?>
+<script>
+    var msg = '{{Session::get('alert')}}';
+    var exist = '{{Session::has('alert')}}';
+    if(exist){
+        alert(msg);
+    }
+</script>
 <html lang="english">
 <head>
     <meta charset="utf-8">
@@ -45,10 +49,11 @@ use Illuminate\Support\Facades\Auth;
                                 <x-label for="jumlah :" :value="__('jumlah')" />
                                 <x-input id="jumlah" class="w-full" type="number" name="jumlah" :value="old('jumlah')" required autofocus />
                             </div>
-                            <div class="w-full text-center border-8">
-                                <x-input class="" type="submit" value="Beli" name="beli" />
+                            <div class="">
+                                <x-input class="w-full text-center border-8" type="submit" value="Beli" name="beli" />
                             </div>
-                            <x-input class="hidden" type="text" name="itemid" id="itemid" :value="$barang->id"  />
+                            <x-input class="hidden" type="text" name="itemid" id="itemid" :value="$barang->id"/>
+
                         </form>
                     </div>
                 </div>

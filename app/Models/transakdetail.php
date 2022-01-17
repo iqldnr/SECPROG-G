@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class transakdetail extends Model
 {
+    public $timestamps = false;
+
+    public $fillable = [
+        'itemid',
+        'jumlah'
+    ];
     use HasFactory;
 }

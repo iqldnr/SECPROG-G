@@ -15,6 +15,7 @@ class CreateTransakdetailsTable extends Migration
     {
         Schema::create('transakdetails', function (Blueprint $table) {
             $table->id();
+            $table->string('transakid');
             $table->string('itemid');
             $table->integer('jumlah');
         });

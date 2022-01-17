@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ItemsController;
+use App\Http\Controllers\TransakdetailController;
+use App\Http\Controllers\TransaksiController;
 use App\Models\cart;
 use App\Models\items;
 use Illuminate\Support\Facades\Route;
@@ -52,6 +54,8 @@ Route::get('/cart', function (){
     ]);
 });
 
+Route::post('/transak', [TransaksiController::class, 'store']);
+Route::post('/transakk', [TransakdetailController::class, 'store']);
 Route::post('/upload-produk', [ItemsController::class, 'store']);
 
 Route::post('/addcart', [CartController::class, 'store']);

@@ -42,6 +42,19 @@
                     @endif
                 @endforeach
             </div>
+            <div class="container">
+                <form method="post" action="/transak">
+                    @csrf
+                    <div class="grid grid-flow-col-dense text-left ">
+                        <h2>Alamat : </h2>
+                        <x-input id="Alamat" class="w-full" type="text" name="alamat" :value="old('alamat')" required autofocus />
+                    </div>
+                    <div class="">
+                        <x-input class="w-full text-center backdrop-sepia border-8" type="submit" value="Beli" name="beli" />
+                    </div>
+
+                </form>
+            </div>
         @endsection
 </body>
 </html>
