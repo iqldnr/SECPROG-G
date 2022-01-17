@@ -35,7 +35,7 @@
                             @php
                                 $item = items::find($keranjang->itemid);
                             @endphp
-                            <h3>{{ $item->id}}</h3>
+                            <h3>{{ $item->name}}</h3>
                             <h5>Jumlah: {{$keranjang['jumlah']}}</h5>
                             <br>
                         </div>
