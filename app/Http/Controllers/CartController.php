@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\cart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use App\Models\items;
 use Symfony\Component\Routing\Route;
 
 class CartController extends Controller
@@ -17,7 +18,9 @@ class CartController extends Controller
             $cartitem->userid = \Auth::user()->id;
             $cartitem->itemid = $request->itemid;
             $cartitem->jumlah = $request->jumlah;
-
+            $item = items::firstWhere('id',$cartitem->itemid);
+            print $item;
+            $item->stock = $item->stock - $cartitem->jumlah ;
             $cartitem->save();
             return Redirect::to('produk');
         }

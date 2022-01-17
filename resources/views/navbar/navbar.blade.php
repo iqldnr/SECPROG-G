@@ -14,7 +14,7 @@
                 @if (Route::has('login'))
                     <div class="hidden fixed top-0 left-0 px-6 py-4 sm:block">
                         @auth
-                            <a href="{{ url('/dashboard') }}" class="text-gray-700 dark:text-gray-500">DASHBOARD</a>
+                            <a href="{{ url('/cart') }}" class="text-gray-700 dark:text-gray-500">CART</a>
                         @else
                             <a href="{{ route('login') }}" class="text-gray-700 dark:text-gray-500">LOG IN</a>
 

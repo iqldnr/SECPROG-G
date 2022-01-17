@@ -41,7 +41,6 @@ use Illuminate\Support\Facades\Auth;
                     <div class="card-body">
                         <form method ="post" action="/addcart" >
                             @csrf
-                            <h5>ID = {{ $barang["id"] }}</h5>
                             <div class="grid-cols-2 grid">
                                 <x-label for="jumlah :" :value="__('jumlah')" />
                                 <x-input id="jumlah" class="w-full" type="number" name="jumlah" :value="old('jumlah')" required autofocus />

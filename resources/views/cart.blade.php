@@ -1,6 +1,11 @@
-<?php use Illuminate\Support\Facades\Auth;
-    $uid = Auth::user()->id;
-?>
+
+    @php
+        use Illuminate\Support\Facades\Auth;
+        use App\Models\items;
+        use App\Models\cart;
+
+        $uid = Auth::user()->id;
+    @endphp
 
 
 
@@ -21,16 +26,19 @@
     @extends('navbar.navbar')
 
         @section('content')
-            <h1>Keranjang</h1>
+            <h1 class="text-center">Keranjang</h1>
 
-            <div class="detail">
-
+            <div class="detail grid grid-cols-4 left-auto right-auto">
                 @foreach ($cart as $keranjang)
-                    @if($keranjang['userid'] === $uid  )
-                        {{-- gw ga tau cara nyambungin item ID ke nama --}}
-                        <h3>Nama Barang: {{ $keranjang['itemid'] }}</h3>
-                        <h5>Jumlah: {{ $keranjang['jumlah'] }}</h5>
-                        <br>
+                    @if($keranjang['userid'] == $uid  )
+                        <div class="container w-3">
+                            @php
+                                $item = items::find($keranjang->itemid);
+                            @endphp
+                            <h3>{{ $item->id}}</h3>
+                            <h5>Jumlah: {{$keranjang['jumlah']}}</h5>
+                            <br>
+                        </div>
                     @endif
                 @endforeach
             </div>

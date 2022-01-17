@@ -18,8 +18,7 @@ class CreateTransaksisTable extends Migration
             $table->string('userid');
             $table->string('alamatkirim');
             $table->string('status');
-
-
+            $table->integer('total_harga');
             $table->timestamps();
         });
     }
