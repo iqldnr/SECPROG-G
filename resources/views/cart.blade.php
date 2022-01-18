@@ -1,11 +1,5 @@
 
-    @php
-        use Illuminate\Support\Facades\Auth;
-        use App\Models\items;
-        use App\Models\cart;
 
-        $uid = Auth::user()->id;
-    @endphp
 
 
 
@@ -24,6 +18,19 @@
 </head>
 <body>
     @extends('navbar.navbar')
+
+        @php
+            use Illuminate\Support\Facades\Auth;
+            use App\Models\items;
+            use App\Models\cart;
+            use Illuminate\Support\Facades\Redirect;
+
+            try {
+                $uid = Auth::user()->id;
+             }catch (exception $e){
+                return Redirect::to('login');
+             }
+        @endphp
 
         @section('content')
             <h1 class="text-center">Keranjang</h1>
@@ -55,6 +62,6 @@
 
                 </form>
             </div>
-        @endsection
+
 </body>
 </html>
