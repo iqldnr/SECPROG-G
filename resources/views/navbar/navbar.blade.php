@@ -35,6 +35,7 @@
                     <li><a href="{{ url('/home') }}" class=" text-gray-700 dark:text-gray-500">HOME</a></li>
                     <li><a href="{{ url('/produk') }}" class="text-gray-700 dark:text-gray-500">PRODUK</a></li>
                     <li><a href="{{ url('/tentang') }}" class="text-gray-700 dark:text-gray-500">TENTANG KAMI</a></li>
+                    <li><a href="{{ url('/transaksi') }}" class="text-gray-700 dark:text-gray-500">PESANAN SAYA</a></li>
                 </ul>
             </div>
         </nav>

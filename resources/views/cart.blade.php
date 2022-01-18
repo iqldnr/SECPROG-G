@@ -28,7 +28,7 @@
             try {
                 $uid = Auth::user()->id;
              }catch (exception $e){
-                return Redirect::to('login');
+                Redirect::to('login');
              }
         @endphp
 

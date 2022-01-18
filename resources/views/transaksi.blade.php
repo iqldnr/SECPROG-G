@@ -3,8 +3,14 @@
     use App\Models\items;
     use App\Models\transaksi;
     use App\Models\transakdetail;
+    use Illuminate\Support\Facades\Redirect;
 
-    $uid = Auth::user()->id;
+            try {
+                $uid = Auth::user()->id;
+             }catch (exception $e){
+                Redirect::to('login');
+             }
+
 @endphp
 
 <!DOCTYPE html>
@@ -23,7 +29,7 @@
         <h1>Transaksi</h1>
         <br>
         <div>
-            @foreach ($transaksi as $transaksi)
+            @foreach ($transaksi as $transsaksi)
                 @if($transaksi['userid'] === $uid)
                 <div>
                     <h3>Status Pengiriman: {{ $transaksi['status'] }}</h3>
@@ -40,11 +46,11 @@
                 <div>
                     <h3>Total Harga: {{ $transaksi['total_harga'] }}</h3>
                 </div>
-                    
+
                 @endif
             @endforeach
         </div>
-        
+
 
 
     @endsection
