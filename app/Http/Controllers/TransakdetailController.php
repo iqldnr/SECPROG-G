@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
+
 
 class TransakdetailController extends Controller
 {
@@ -13,6 +15,6 @@ class TransakdetailController extends Controller
 
 
 
-        return Redirect::to('produk');
+        return Redirect::to('/produk');
     }
 }

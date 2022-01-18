@@ -6,6 +6,8 @@ use App\Http\Controllers\TransakdetailController;
 use App\Http\Controllers\TransaksiController;
 use App\Models\cart;
 use App\Models\items;
+use App\Models\transaksi;
+use App\Models\transakdetail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -51,6 +53,12 @@ Route::get('/dashboard', function () {
 Route::get('/cart', function (){
     return view('cart',[
         "cart" => cart::All()
+    ]);
+});
+Route::get('/transaksi', function (){
+    return view('transaksi',[
+        "transaksi" => transaksi::All(),
+        "transaksidetail" => transakdetail::All()
     ]);
 });
 

@@ -18,7 +18,7 @@ class CartController extends Controller
 
 
                 $cartitem = new cart();
-                $cartitem->userid = \Auth::user()->id;
+                $cartitem->userid = Auth::user()->id;
                 $cartitem->itemid = $request->itemid;
                 $cartitem->jumlah = $request->jumlah;
                 if ($cartitem->jumlah < 0) {
