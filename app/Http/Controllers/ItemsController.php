@@ -16,14 +16,14 @@ class ItemsController extends Controller
 
         $items->name = $request->name;
 
-        $items->uploader = "admin";
+        $items->uploader = \Auth::user()->id;
 
         $items->price = $request->price;
 
         $items->description = $request->description;
         $items->stock = $request->jumlah;
         $items->save();
-        
+
         $destination_path = 'public\images\products';
         $image = $request->file('image');
         $image_name = $items->id;

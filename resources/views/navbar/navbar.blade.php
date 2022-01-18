@@ -15,6 +15,7 @@
                     <div class="nav-links-a hidden fixed top-0 left-0 px-6 py-4 sm:block">
                         @auth
                             <a href="{{ url('/cart') }}" class="text-gray-700 dark:text-gray-500">CART</a>
+                            <a href="{{ url('/upload-produk') }}" class="text-gray-700 dark:text-gray-500">UPLOAD PRODUK</a>
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
                                 <x-input class="text-gray-700 dark:text-gray-500 " type="submit" value="Logout" name="Logout" />
