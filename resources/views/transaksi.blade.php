@@ -5,12 +5,8 @@
     use App\Models\transakdetail;
     use Illuminate\Support\Facades\Redirect;
 
-            try {
-                $uid = Auth::user()->id;
-             }catch (exception $e){
-                Redirect::to('login');
-             }
 
+                $uid = Auth::user()->id;
 @endphp
 
 <!DOCTYPE html>
@@ -22,29 +18,21 @@
     <title>Transaksi</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/stylewind.css">
 </head>
-<body>
+<body class="body-transak" >
     @extends('navbar.navbar')
     @section('content')
         <h1>Transaksi</h1>
         <br>
-        <div>
+        <div class="gap-4 flex-auto flex">
             @foreach ($transaksi as $transsaksi)
-                @if($transaksi['userid'] === $uid)
-                <div>
-                    <h3>Status Pengiriman: {{ $transaksi['status'] }}</h3>
-                    <h4>Alamat Pengiriman:</h4>
-                    <p> {{ $transaksi['alamatkirim'] }} </p>
-                </div>
-                <div>
-                    @php
-                        $item = items::find($transaksidetail->itemid);
-                    @endphp
-                    <h3>{{ $item->name}}</h3>
-                    <p>Jumlah: {{$transaksidetail['jumlah']}}</p>
-                </div>
-                <div>
-                    <h3>Total Harga: {{ $transaksi['total_harga'] }}</h3>
+                @if($transsaksi['userid'] == $uid)
+                <div class="border-amber-700 border-2 w-fit ">
+                    <h3>Status Pengiriman: {{ $transsaksi['status'] }}</h3>
+                    <h4>Alamat Pengiriman:  {{ $transsaksi['alamatkirim'] }} </h4>
+                    <p></p>
+                    <h3>Total Harga: {{ $transsaksi['total_harga'] }}</h3>
                 </div>
 
                 @endif
